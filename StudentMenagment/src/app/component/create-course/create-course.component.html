@@ -1,0 +1,9 @@
+<h1>Create Course!</h1>
+
+<form [formGroup]="frm" (ngSubmit)="onSubmit()">
+	<input type="text" placeholder="Course Name" formControlName="CourseName" ><br>
+		<input type="text" placeholder="Teacher" formControlName="Teacher" ><br>
+		<input type="text" placeholder="Fees" formControlName="Fees" ><br>
+		<input type="text" placeholder="Duration" formControlName="Duration" ><br>
+	  <button>Save</button>
+</form>

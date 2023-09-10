@@ -1,0 +1,14 @@
+<p>create-user works!</p>
+
+<form [formGroup]="frm" (ngSubmit)="onSubmit()">
+	<input type="text" placeholder="Name" formControlName="Name" ><br>
+		<input type="password" placeholder="Password" formControlName="Password" ><br>
+
+		<select formControlName="Detail" >
+			<option value="2">Admin</option>
+			<option value="1">Teacher</option>
+			<option value="3">Student</option>
+		</select>
+
+	  <button>Save</button>
+</form>
