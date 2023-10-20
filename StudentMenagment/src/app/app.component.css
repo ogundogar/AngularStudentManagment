@@ -1,0 +1,9 @@
+body{
+	text-align: center;
+	background-color: rgb(123, 162, 175);
+	height: 100vh;
+}
+h1{
+	color: white;
+	font-size: 50px;
+}

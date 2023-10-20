@@ -1,9 +1,11 @@
-<h1>Create Course!</h1>
-
+<h1>Add Course</h1>
 <form [formGroup]="frm" (ngSubmit)="onSubmit()">
-	<input type="text" placeholder="Course Name" formControlName="CourseName" ><br>
-		<input type="text" placeholder="Teacher" formControlName="Teacher" ><br>
-		<input type="text" placeholder="Fees" formControlName="Fees" ><br>
-		<input type="text" placeholder="Duration" formControlName="Duration" ><br>
+	<input type="text" placeholder="Course Name" formControlName="courseName" ><br>
+		<select formControlName="teacherId">
+		<option *ngFor="let veri of user" [value]="veri.id">{{veri.name}}</option>
+		</select>
+		 <br>
+		<input type="text" placeholder="Fees" formControlName="fees" ><br>
+		<input type="text" placeholder="Duration" formControlName="duration" ><br>
 	  <button>Save</button>
 </form>

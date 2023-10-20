@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { DataClientService } from 'src/app/services/data-client.service';
 
 @Component({
   selector: 'app-create-user',
@@ -8,13 +10,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export default class CreateUserComponent {
 	frm:FormGroup;
-  
-	constructor(private formBuilder:FormBuilder){
+	
+	constructor(private formBuilder:FormBuilder,private httpClient:HttpClient,private DataClientService:DataClientService){
 	  this.frm=formBuilder.group({
-			Name:[""],
-			Password:[""],
-			Detail:[""],
+			name:[""],
+			password:[""],
+			detailId:[""],
 		});
 	}
-	onSubmit(){console.log(this.frm.value)}
+	onSubmit(){
+		console.log(this.frm.value);
+		this.DataClientService.addUser(this.frm.value);
+	}
 }

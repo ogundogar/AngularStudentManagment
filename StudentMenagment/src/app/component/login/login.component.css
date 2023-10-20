@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+}
+.container {
+    text-align: center;
+}
+
+input{
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+	border: 2px solid black; 
+    padding: 5px; 
+}
+
+button{
+	margin: 5px 5px 5px 5px;
+	border: 1px solid black; 
+    padding: 3px; 
+}
+h1{
+	color: white;
+	font-size: 40px;
+}

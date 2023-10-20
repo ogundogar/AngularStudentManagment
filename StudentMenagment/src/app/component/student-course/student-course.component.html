@@ -1,0 +1,24 @@
+<h1>Kurs Kayıt İşlemleri</h1>
+<div class="tableCourse">
+	<table>
+		<tr>
+		  <th>ID</th>
+		  <th>teacherId</th>
+		  <th>courseName</th>
+		  <th>duration</th>
+		  <th>fees</th>
+		</tr>
+	  <tbody *ngFor="let veri of course">
+	  <tr>
+			  <td>{{ veri.id }}</td>
+				  <div *ngFor="let users of user">
+					  <td *ngIf="veri.teacherId===users.id">{{ users.name }}</td>
+				  </div>
+			  <td>{{ veri.courseName }}</td>
+			  <td>{{ veri.duration }}</td>
+			  <td>{{ veri.fees }}</td>
+			  <td><button (click)="onSubmit(veri)"> Join </button></td>
+	  </tr>
+	  </tbody>
+	</table>
+</div>

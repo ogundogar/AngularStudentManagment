@@ -1,0 +1,31 @@
+<p>student-student works!</p>
+<div class="tableStudent">
+	<table>
+		<tr>
+		  <th>ID</th>
+		  <th>CourseName </th>
+		  <th>Student</th>
+		  <th>Teacher</th>
+		  <th>Passed</th>
+		</tr>
+		<tr *ngFor="let veri of student">
+		  <th>{{ veri.id }}</th>
+		  <td>
+			  <div *ngFor="let courses of course">
+				  <div *ngIf="veri.courseId===courses.id">{{ courses.courseName }}</div>
+			  </div>
+		  </td>
+		  <td>
+			  <div *ngFor="let users of user">
+				  <div *ngIf="veri.studentId===users.id">{{ users.name }}</div>
+			  </div>
+		  </td>
+		  <td>
+			  <div *ngFor="let users of user">
+				  <div *ngIf="veri.teacherId===users.id">{{ users.name }}</div>
+			  </div>
+		  </td>
+		  <td>{{veri.passed}}</td>
+		</tr>
+	</table>	
+</div>

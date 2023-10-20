@@ -1,0 +1,33 @@
+<p>student</p>
+<div class="tableStudent">
+	<table >
+		<tr>
+		  <th>ID</th>
+		  <th>courseId</th>
+		  <th>studentId</th>
+		  <th>teacherId</th>
+		  <th>Passed</th>
+		</tr>
+		<tbody *ngFor="let veri of student">
+		<tr *ngIf="veri.courseId==courseId">
+		<th>{{ veri.id }}</th>
+		<td>
+			<div *ngFor="let courses of course">
+				<div *ngIf="veri.courseId===courses.id">{{ courses.courseName }}</div>
+			</div>
+		</td>
+		<td>
+			  <div *ngFor="let users of user">
+				  <div *ngIf="veri.studentId===users.id">{{ users.name }}</div>
+			  </div>
+		</td>
+		<td>
+				<div *ngFor="let users of user">
+					<div *ngIf="veri.teacherId===users.id">{{ users.name }}</div>
+				</div>
+		</td>
+		  <td><button (click)="onUpdate(veri)">{{veri.passed}}</button> </td>
+		</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,1 +1,18 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container ">
+		<h1>LOGIN</h1>
+			<form [formGroup]="frm" (ngSubmit)="onSubmit()">
+				<input type="text" placeholder="Name" formControlName="name" ><br>
+					<input type="password" placeholder="Password" formControlName="password" ><br>
+				  <button>Save</button>
+			</form>
+		</div>
+</body>
+</html>

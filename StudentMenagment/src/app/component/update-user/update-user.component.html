@@ -1,0 +1,19 @@
+<h3>Update User</h3>
+<div class="updateForm">
+	<form [formGroup]="frm" (ngSubmit)="onUpdate()">
+		
+				
+				<input type="text" formControlName="id" placeholder="id"><br>
+		
+			<input type="text" formControlName="name" placeholder="Name"><br>
+			
+			<input type="text" formControlName="password" placeholder="Password"><br>
+			
+			<select formControlName="detailId">
+				<option value="2">Admin</option>
+				<option value="1">Teacher</option>
+				<option value="3">Student</option>
+			</select>
+		<button>Update</button>
+	</form>
+</div>

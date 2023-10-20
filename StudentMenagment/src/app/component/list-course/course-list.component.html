@@ -1,0 +1,30 @@
+<h1>Course List</h1>
+<div class="tableCourse">
+	<table>
+		<thead>
+		  <tr>
+			<th>ID</th>
+			<th>teacherId</th>
+			<th>courseName</th>
+			<th>duration</th>
+			<th>fees</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor="let veri of course">
+			<th>{{ veri.id }}</th>
+			<div *ngFor="let users of user">
+				<td *ngIf="veri.teacherId===users.id">{{ users.name }}</td>
+			</div>
+			<td>{{ veri.courseName }}</td>
+			<td>{{ veri.duration }}</td>
+			<td>{{ veri.fees }}</td>
+			<td>
+				<button (click)="onDelete(veri)">Delete</button>
+				<!--<button routerLink="update-user">Güncelle</button>-->
+				</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+</div>

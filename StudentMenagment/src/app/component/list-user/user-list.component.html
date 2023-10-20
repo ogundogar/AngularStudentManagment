@@ -1,0 +1,29 @@
+<h2>User List</h2>
+<div class="tableUser">
+<table>
+	<thead>
+	  <tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Password</th>
+		<th>Detail</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr *ngFor="let veri of user">
+		<th>{{ veri.id }}</th>
+		<td>{{ veri.name }}</td>
+		<td>{{ veri.password }}</td>
+		<div *ngFor="let details of detail">
+		<td *ngIf="veri.detailId===details.id">{{ details.detail }}</td>
+		</div>
+		<td>
+		<button (click)="onDelete(veri)">Delete</button>
+		<button routerLink="update-user">Güncelle</button>
+		</td>
+	  </tr>
+	</tbody>
+  </table>
+</div>
+
+  <router-outlet></router-outlet>
